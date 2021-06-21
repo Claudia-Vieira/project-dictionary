@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 export default function Dictionary (){
 
@@ -8,8 +9,20 @@ export default function Dictionary (){
        setWord(response.target.value);
    }
 
+
+
    function handleSubmit(event){
        event.preventDefault();
+
+       function getInformation(response){
+        console.log(response.data[0])
+    }
+
+       //documentation: https://dictionaryapi.dev/
+
+       let apiUrl=`https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`;
+       axios.get(apiUrl).then(getInformation);
+       
        return (alert(word))
 
    }
