@@ -9,7 +9,16 @@ export default function Information(props){
             return(
                 <div key={index}>
                     <h4>{meaning.partOfSpeech}</h4>
-                    <p>{meaning.definitions[0].definition}</p>
+
+                    {meaning.definitions.map(function(definition,index){
+                        return(
+                            <div key={index}>
+                                <p>{definition.definition}</p>
+                                <p><em>{definition.example}</em></p>
+                            </div>
+                        )
+                    })}
+
                    {console.log(meaning)}
                 </div>
             )
