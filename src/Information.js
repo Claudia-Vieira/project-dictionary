@@ -1,11 +1,13 @@
 import React from "react";
 import Synonyms from "./Synonyms"
+import Phonetics from "./Phonetics"
 
 export default function Information(props){
     if(props.information){
       return(
         <div>
         <h2>{props.information.word}</h2>
+        <Phonetics phonetics={props.information.phonetics}/> 
         {props.information.meanings.map(function(meaning, index){
             return(
                 <div key={index}>
