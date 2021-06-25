@@ -1,4 +1,5 @@
 import React from "react";
+import ReactAudioPlayer from 'react-audio-player';
 
 export default function Phonetics (props){
     if(props.phonetics){
@@ -7,7 +8,10 @@ export default function Phonetics (props){
     props.phonetics.map(function (phonetics, index){
         return(
             <div key={index}>
-                <a href={phonetics.audio} target="_blank" rel="noreferrer">Listen</a>
+                <ReactAudioPlayer
+                    src={phonetics.audio}
+                    controls
+                />
                 <p>{phonetics.text}</p>
             </div>
         )
