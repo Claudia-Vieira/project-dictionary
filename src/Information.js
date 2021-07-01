@@ -4,15 +4,16 @@ import Phonetics from "./Phonetics"
 import "./Information.css"
 
 export default function Information(props){
-    if(props.information){
+    if(props.information && props.photos){
+        console.log(props.photos)
       return(
         <div>
         <h2 className="wordSearch">{props.information.word}</h2>
         <Phonetics phonetics={props.information.phonetics}/> 
         {props.information.meanings.map(function(meaning, index){
             return(
-                <section>
-                <div key={index}>
+                <section key={index}>
+                <div >
                     <h4>{meaning.partOfSpeech}</h4>
 
                     {meaning.definitions.map(function(definition,index){
