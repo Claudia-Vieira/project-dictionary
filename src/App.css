@@ -1,6 +1,9 @@
 .App {
   text-align: center;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  max-width: 960px;
+  margin:0 auto;
+  margin-bottom: 30px;
 }
 
 .App-header h1{
