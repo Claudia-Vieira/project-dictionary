@@ -19,7 +19,7 @@ export default function Information(props){
                         return(
                             <div key={index}>
                                 <p className="mb-1"> {definition.definition}</p>
-                                <p className="example"><em>{definition.example}</em></p>
+                                <p className="example"><em>{definition.example}.</em></p>
                                 <Synonyms synonyms={definition.synonyms}/>
                             </div>
                         )
