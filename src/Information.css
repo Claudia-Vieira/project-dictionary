@@ -1,0 +1,28 @@
+.wordSearch{
+    text-shadow: 1px 0px 5px rgb(135, 206, 235)
+}
+
+section {
+    background-color: rgb(135, 206, 235, 0.1);
+    margin-left: 100px;
+    margin-right:100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(2, 51, 99, 0.5);
+    padding:15px;
+}
+
+section h4{
+    text-shadow: 1px 1px 1px rgb(135, 206, 235);
+}
+
+.example{
+    opacity: 0.7;
+    margin-bottom: 10px;
+    font-size:90%;
+}
+
+.example:first-letter{
+text-transform: capitalize;
+}

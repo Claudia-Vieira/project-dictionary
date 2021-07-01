@@ -1,0 +1,13 @@
+li {
+display:inline-block;
+margin:10px;
+border: 1px solid rgb(135, 206, 235);
+border-radius:10px;
+box-shadow: 1px 1px 1px #023363;
+padding:5px;
+}
+
+ul{
+margin:0;
+padding:0;
+}
