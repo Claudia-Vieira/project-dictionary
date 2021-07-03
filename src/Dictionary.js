@@ -3,6 +3,7 @@ import axios from "axios";
 
 import "./Dictionary.css"
 import Information from "./Information"
+import Photos from "./Photos"
 
 export default function Dictionary (){
 
@@ -32,7 +33,7 @@ export default function Dictionary (){
        axios.get(apiUrl).then(getInformation);
 
        let pexelsApiKey='563492ad6f91700001000001525f2e54a92e47c2afaee1bfe5763cdc'
-       let pexelsApiUrl='https://api.pexels.com/v1/search?query=nature&per_page=1'
+       let pexelsApiUrl=`https://api.pexels.com/v1/search?query=${word}&per_page=3`
 
        let headers = { Authorization: `Bearer ${pexelsApiKey}` };
 
@@ -47,7 +48,8 @@ export default function Dictionary (){
            <input type="search" placeholder="Enter a word" onChange={getWord}/>
        </form>
 
-       <Information information={information} photos={photos}/>
+       <Information information={information}/>
+       <Photos photos={photos}/>
 
     </div>
    )
